@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MERN 4 - Index</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@3.5.0/dist/full.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="container mx-auto p-2">
+    <h2 class="text-6xl text-center my-16 text-[#D0ABFF]">
+      MERN 4 - Assignment
+    </h2>
+    <div
+      class="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-12"
+    >
+      <!-- discount calculator  -->
+      <div class="w-full bg-base-100 shadow-xl border h-fit">
+        <h2
+          class="px-4 py-1 bg-gray-200 border border-gray-300 text-2xl font-semibold"
+        >
+          1. Discount Calculator
+        </h2>
+        <div class="card-body">
+          <input
+            type="number"
+            name="discount"
+            id="discountInput"
+            class="border py-3 rounded-md px-2 focus:outline-none text-xl"
+            placeholder="Enter Purchase Amount"
+          />
+          <div class="card-actions justify-end">
+            <button class="btn btn-primary" id="calculateBtn">Calculate</button>
+          </div>
+          <div class="hidden" id="discountInfo">
+            <p class="text-xl font-semibold">
+              Total Amount: <span id="totalAmount">0</span>
+            </p>
+            <hr class="my-1" />
+            <p class="text-xl font-semibold">
+              Discount: <span id="discountPercentage">0</span>%
+            </p>
+            <hr class="my-1" />
+            <p class="text-xl font-semibold">
+              Discounted Amount: <span id="discountedAmount">0</span>
+            </p>
+            <hr class="my-1" />
+            <p class="text-xl font-semibold">
+              Final Amount: <span id="finalAmount">0</span>
+            </p>
+            <hr class="my-1" />
+          </div>
+        </div>
+      </div>
+      <!-- filter even numbers -->
+      <div class="w-full bg-base-100 shadow-xl border h-fit">
+        <h2
+          class="px-4 py-1 bg-gray-200 border border-gray-300 text-2xl font-semibold"
+        >
+          2. Filter Even Numbers
+        </h2>
+        <div class="card-body">
+          <input
+            type="text"
+            id="evenInput"
+            class="border py-3 rounded-md px-2 focus:outline-none text-xl"
+            placeholder="i.e [3, 5, 7, 9] or 3, 5, 7, 89"
+          />
+          <div class="card-actions justify-end">
+            <button class="btn btn-primary" id="evenBtn">Filter</button>
+          </div>
+          <div
+            class="bg-black text-white px-4 py-2 text-xl rounded-md hidden"
+            id="evenNumbers"
+          ></div>
+        </div>
+      </div>
+      <!-- multiplication -->
+      <div class="w-full bg-base-100 shadow-xl border h-fit">
+        <h2
+          class="px-4 py-1 bg-gray-200 border border-gray-300 text-2xl font-semibold"
+        >
+          3. Multiplication
+        </h2>
+        <div class="card-body">
+          <input
+            type="number"
+            id="multiInput"
+            class="border py-3 rounded-md px-2 focus:outline-none text-xl"
+            placeholder="Enter any number"
+          />
+          <div class="card-actions justify-end">
+            <button class="btn btn-primary" id="multiBtn">Multiply</button>
+          </div>
+          <div id="multiInfo"></div>
+        </div>
+      </div>
+      <!-- grade calculator -->
+      <div class="w-full bg-base-100 shadow-xl border h-fit">
+        <h2
+          class="px-4 py-1 bg-gray-200 border border-gray-300 text-2xl font-semibold"
+        >
+          4. Grade Calculator
+        </h2>
+        <div class="card-body">
+          <input
+            type="number"
+            id="gradeInput"
+            class="border py-3 rounded-md px-2 focus:outline-none text-xl"
+            placeholder="Enter any number"
+          />
+          <div class="card-actions justify-end">
+            <button class="btn btn-primary" id="gradeBtn">Grade</button>
+          </div>
+          <div
+            id="gradeInfo"
+            class="bg-black text-white px-4 py-2 text-xl rounded-md hidden"
+          ></div>
+        </div>
+      </div>
+    </div>
+    <script src="js/discount.js"></script>
+    <script src="js/even.js"></script>
+    <script src="js/multi.js"></script>
+    <script src="js/grade.js"></script>
+  </body>
+</html>
